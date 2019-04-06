@@ -1,0 +1,46 @@
+<div class="row" id="places-form">
+
+<div class="col">
+
+<form action="/place" method="POST">
+
+ <div class="form-group">
+   <label>Place Name</label>
+   <input type="text" class="form-control" name="name"
+     placeholder="Enter place name">
+ </div>
+
+ <div class="form-group">
+   <label>Place Type</label>
+   <input type="text" class="form-control"
+     name="type">
+ </div>
+
+<div class="form-group">
+   <label>Latitud</label>
+   <input  class="form-control"
+     name="lat" id='lat'>
+ </div>
+
+ <div class="form-group">
+   <label>Longitud</label>
+   <input  class="form-control"
+     name="long" id='long'>
+ </div>
+
+ <div class="d-flex">
+   <button type="submit" class="btn btn-primary mr-3">Submit</button>
+   <a class="btn btn-secondary" href="/place">Back</a>
+ </div>
+</form>
+
+</div>
+
+<div class="col bg-dark" id='map' style='width:100%;height:500px'>
+
+</div>
+
+</div>
+
+
+

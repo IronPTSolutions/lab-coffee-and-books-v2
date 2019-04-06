@@ -6,6 +6,7 @@ const logger = require('morgan');
 
 require('./config/db.config');
 require('./config/hbs.config');
+const placeRouter= require('./routes/places.routes')
 
 const app = express();
 
@@ -18,6 +19,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req,res)=> res.redirect('/place'))
+
+app.use ('/place',placeRouter)
 
 // routes here
 
