@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const placesRouter = require('./routes/places.routers');
 
 require('./config/db.config');
 require('./config/hbs.config');
@@ -20,6 +21,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routes here
+
+app.use('/places', placesRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,7 +1,13 @@
 const mongoose = require('mongoose');
 
 const placeSchema = new mongoose.Schema({
-  // ...
+  name: {
+    type: String,
+  },
+  type: {
+    type: String,
+    enum: ['coffee shop', 'bookstore']
+  }
 }, { timestamps: true });
 
 placeSchema.index({ location: '2dsphere' });
