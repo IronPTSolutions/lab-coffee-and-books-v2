@@ -7,4 +7,6 @@ router.get('/new', placesController.new )
 
 router.post('/', placesController.create);
 
+//router.post('')
+
 module.exports = router
